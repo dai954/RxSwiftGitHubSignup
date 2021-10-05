@@ -14,6 +14,11 @@
 		0975F98C2708777700DED8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0975F98B2708777700DED8C4 /* Assets.xcassets */; };
 		0975F98F2708777700DED8C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0975F98D2708777700DED8C4 /* LaunchScreen.storyboard */; };
 		0975F997270879E900DED8C4 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F996270879E800DED8C4 /* UIView+Layout.swift */; };
+		0975F99B270ADC6400DED8C4 /* GitHubSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F99A270ADC6400DED8C4 /* GitHubSignupViewController.swift */; };
+		0975F99F270ADD2F00DED8C4 /* GitHubSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F99E270ADD2F00DED8C4 /* GitHubSignupViewModel.swift */; };
+		0975F9A1270ADF6600DED8C4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F9A0270ADF6600DED8C4 /* Protocols.swift */; };
+		0975F9A3270AE2FE00DED8C4 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F9A2270AE2FE00DED8C4 /* BindingExtensions.swift */; };
+		0975F9A5270AE73B00DED8C4 /* DefaultImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F9A4270AE73B00DED8C4 /* DefaultImplementations.swift */; };
 		EE107FCFB5D9C99823F1F519 /* Pods_RxSwiftGitHubSignup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AEFB39689AD7505ED8D9FD /* Pods_RxSwiftGitHubSignup.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +33,11 @@
 		0975F98E2708777700DED8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0975F9902708777700DED8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0975F996270879E800DED8C4 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		0975F99A270ADC6400DED8C4 /* GitHubSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSignupViewController.swift; sourceTree = "<group>"; };
+		0975F99E270ADD2F00DED8C4 /* GitHubSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSignupViewModel.swift; sourceTree = "<group>"; };
+		0975F9A0270ADF6600DED8C4 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0975F9A2270AE2FE00DED8C4 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
+		0975F9A4270AE73B00DED8C4 /* DefaultImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImplementations.swift; sourceTree = "<group>"; };
 		D5AEFB39689AD7505ED8D9FD /* Pods_RxSwiftGitHubSignup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftGitHubSignup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A2B40A9CEFB830980BAE93 /* Pods-RxSwiftGitHubSignup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftGitHubSignup.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftGitHubSignup/Pods-RxSwiftGitHubSignup.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,16 +75,37 @@
 		0975F9812708777400DED8C4 /* RxSwiftGitHubSignup */ = {
 			isa = PBXGroup;
 			children = (
+				0975F99D270ADCFC00DED8C4 /* ViewModels */,
+				0975F99C270ADCEB00DED8C4 /* Controllers */,
 				0975F9822708777400DED8C4 /* AppDelegate.swift */,
 				0975F9842708777400DED8C4 /* SceneDelegate.swift */,
-				0975F9862708777400DED8C4 /* ViewController.swift */,
-				0975F9882708777400DED8C4 /* Main.storyboard */,
 				0975F996270879E800DED8C4 /* UIView+Layout.swift */,
+				0975F9882708777400DED8C4 /* Main.storyboard */,
+				0975F9862708777400DED8C4 /* ViewController.swift */,
 				0975F98B2708777700DED8C4 /* Assets.xcassets */,
 				0975F98D2708777700DED8C4 /* LaunchScreen.storyboard */,
 				0975F9902708777700DED8C4 /* Info.plist */,
+				0975F9A0270ADF6600DED8C4 /* Protocols.swift */,
+				0975F9A2270AE2FE00DED8C4 /* BindingExtensions.swift */,
+				0975F9A4270AE73B00DED8C4 /* DefaultImplementations.swift */,
 			);
 			path = RxSwiftGitHubSignup;
+			sourceTree = "<group>";
+		};
+		0975F99C270ADCEB00DED8C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0975F99A270ADC6400DED8C4 /* GitHubSignupViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0975F99D270ADCFC00DED8C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0975F99E270ADD2F00DED8C4 /* GitHubSignupViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		183463CCB2477777916F0EDE /* Pods */ = {
@@ -209,8 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0975F997270879E900DED8C4 /* UIView+Layout.swift in Sources */,
+				0975F99F270ADD2F00DED8C4 /* GitHubSignupViewModel.swift in Sources */,
+				0975F9A1270ADF6600DED8C4 /* Protocols.swift in Sources */,
 				0975F9872708777400DED8C4 /* ViewController.swift in Sources */,
 				0975F9832708777400DED8C4 /* AppDelegate.swift in Sources */,
+				0975F9A3270AE2FE00DED8C4 /* BindingExtensions.swift in Sources */,
+				0975F9A5270AE73B00DED8C4 /* DefaultImplementations.swift in Sources */,
+				0975F99B270ADC6400DED8C4 /* GitHubSignupViewController.swift in Sources */,
 				0975F9852708777400DED8C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
